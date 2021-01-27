@@ -43,7 +43,7 @@ var checkDriverAge2 = function() {
 // it returns "Powering On. Enjoy the ride!" 
 function checkDriverAge(age) {
 	if (Number(age) < 18) {
-		return "Sorry, you are too yound to drive this car. Powering off";
+		return "Sorry, you are too young to drive this car. Powering off";
 	} else if (Number(age) > 18) {
 		return "Powering On. Enjoy the ride!";
 	} else if (Number(age) === 18) {

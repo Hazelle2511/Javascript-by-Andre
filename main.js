@@ -82,6 +82,7 @@ function multiply(a, b) {
 // âge(5);
 // âge(18);
 
+//ES5
 function checkDriverAge(age) {
   if (age < 18) {
     console.log("Sorry, you are too young to drive this car. Powering off");
@@ -96,3 +97,11 @@ function checkDriverAge(age) {
 
 checkDriverAge(66);
 checkDriverAge(6);
+
+//120Data Structures: Arrays
+
+var listAnimals = ["cat", "dog", "pig", "monkey"];
+console.log(listAnimals[0]);
+
+// var listAnimals = [["cat", "dog", "pig", "monkey"]];
+// console.log(listAnimals[0][1]);
