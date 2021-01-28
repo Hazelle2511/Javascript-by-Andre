@@ -105,3 +105,23 @@ console.log(listAnimals[0]);
 
 // var listAnimals = [["cat", "dog", "pig", "monkey"]];
 // console.log(listAnimals[0][1]);
+
+//Exercice 6
+
+var array = ["Bananas", "Apples", "Oranges", "Blueberries"];
+
+let trial;
+trial = array;
+
+trial = array.shift();
+trial = array.sort();
+trial = array.push("Kiwi");
+trial = array.shift();
+trial = array.reverse();
+
+console.log(trial);
+
+//
+var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
+
+console.log(array2[1][1][0]);
