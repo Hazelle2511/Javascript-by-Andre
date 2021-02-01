@@ -125,3 +125,33 @@ console.log(trial);
 var array2 = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 
 console.log(array2[1][1][0]);
+
+/**
+ * Syntax
+array.splice(index, howmany, item1, ....., itemX)
+Parameter Values
+Parameter 	Description
+index 	Required. An integer that specifies at what position to add/remove items, Use negative values to specify the position from the end of the array
+howmany 	Optional. The number of items to be removed. If set to 0, no items will be removed
+item1, ..., itemX 	Optional. The new item(s) to be added to the array
+ */
+
+//122. Data Structures: Objects
+
+var user = {
+  name: "Mael",
+  age: 32,
+  hobby: "cooking",
+  isMarried: true,
+  spells: ["abracadabra", "shazam"],
+};
+
+// var array = ["banana", "pineapple", "apple"];
+
+var list = [
+  { username: "Hazelle", password: "pass" },
+  {
+    username: "Mael",
+    password: "word",
+  },
+];
