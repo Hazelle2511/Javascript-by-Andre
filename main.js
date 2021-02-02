@@ -144,6 +144,9 @@ var user = {
   hobby: "cooking",
   isMarried: true,
   spells: ["abracadabra", "shazam"],
+  shout: function () {
+    console.log("AHHHH!!!");
+  },
 };
 
 // var array = ["banana", "pineapple", "apple"];
@@ -155,3 +158,12 @@ var list = [
     password: "word",
   },
 ];
+
+//var emptyObj = {};
+//you can assign a property here like:
+// emptyObj.name = "Andy"
+
+//var nullObj = null;
+//you cannot assign a property here
+//nullObj.name = "Andy";
+//the result would be Cannot set property of null
