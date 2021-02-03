@@ -167,3 +167,26 @@ var list = [
 //you cannot assign a property here
 //nullObj.name = "Andy";
 //the result would be Cannot set property of null
+
+//Exercice 7;
+
+const facebook = {
+  username: "Mael",
+  password: "Mael",
+};
+
+const database = [
+  {
+    username: "Mael",
+    password: "Mael",
+  },
+  {
+    username: "Hazelle",
+    password: "Hazelle",
+  },
+];
+
+const newsfeed = [
+  { username: "Hazelle", timeline: "time" },
+  { username: "Mael", timeline: "time" },
+];
