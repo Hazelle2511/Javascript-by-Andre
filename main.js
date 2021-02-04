@@ -175,6 +175,24 @@ const facebook = {
   password: "Mael",
 };
 
+// const database = [
+//   {
+//     username: "Mael",
+//     password: "Mael",
+//   },
+//   {
+//     username: "Hazelle",
+//     password: "Hazelle",
+//   },
+// ];
+
+// const newsfeed = [
+//   { username: "Hazelle", timeline: "time" },
+//   { username: "Mael", timeline: "time" },
+// ];
+
+//124 Build Facebook
+
 const database = [
   {
     username: "Mael",
@@ -187,6 +205,18 @@ const database = [
 ];
 
 const newsfeed = [
-  { username: "Hazelle", timeline: "time" },
-  { username: "Mael", timeline: "time" },
+  { username: "Hazelle", timeline: "Time flies" },
+  { username: "Mael", timeline: "I want to be web developer" },
 ];
+
+const userNamePrompt = prompt("What is your username?");
+const passwordPrompt = prompt("What is your password?");
+
+function signIn(uname, pass) {
+  if (uname === database[0].username && pass === database[0].password) {
+    console.log(newsfeed);
+  } else {
+    console.log("You are not registered");
+  }
+}
+signIn(userNamePrompt, passwordPrompt);
