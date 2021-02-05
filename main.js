@@ -220,3 +220,41 @@ function signIn(uname, pass) {
   }
 }
 signIn(userNamePrompt, passwordPrompt);
+
+//125 JavaScript Technology
+//function declaration
+function declaration() {}
+
+//function expression
+const expression = function () {};
+
+//exprerssion
+1 + 3;
+var a = 2;
+return true;
+
+
+//calling or invoking a function
+alert();
+newFunction(param1, param2)
+
+//assign a variable
+var a = true;
+
+//function vs method
+
+function thisIsFunction() {
+
+}
+
+thisIsFunction()
+
+//method
+
+const object = {
+  thisIsMethod: method() {
+    
+  }
+} 
+
+object.thisIsMethod()
