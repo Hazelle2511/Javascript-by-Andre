@@ -229,32 +229,59 @@ function declaration() {}
 const expression = function () {};
 
 //exprerssion
-1 + 3;
-var a = 2;
-return true;
-
+// 1 + 3;
+// var a = 2;
+// return true;
 
 //calling or invoking a function
-alert();
-newFunction(param1, param2)
+// alert();
+// newFunction(param1, param2);
 
 //assign a variable
-var a = true;
+// var a = true;
 
 //function vs method
 
-function thisIsFunction() {
+function thisIsFunction() {}
 
-}
-
-thisIsFunction()
+thisIsFunction();
 
 //method
 
-const object = {
-  thisIsMethod: method() {
-    
-  }
-} 
+// const object = {
+//   thisIsMethod: method() {
 
-object.thisIsMethod()
+//   }
+// }
+
+// object.thisIsMethod()
+
+//126 LOOPS
+
+var todo = [
+  "eat breakfast",
+  "take a shower",
+  "read a book",
+  "exercice",
+  "go to class",
+];
+
+// for (var i = 0; i < todo.length; i++) {
+//   // console.log(todo[i] + "!");
+
+//   //to always have a ! on console
+//   todo[i] = todo[i] + "!";
+//   //will not work because the target value is string
+//   // todo[i].pop();
+
+//   //, you need to target the array like: but it will delete half of the array
+//   todo.pop();
+
+// }
+
+//To delete all
+var todolength = todo.length;
+
+for (var i = 0; i < todolength; i++) {
+  todo.pop();
+}
