@@ -258,30 +258,77 @@ thisIsFunction();
 
 //126 LOOPS
 
-var todo = [
+var todos = [
   "eat breakfast",
   "take a shower",
   "read a book",
   "exercice",
   "go to class",
 ];
+var todosImportant = [
+  "eat breakfast!",
+  "take a shower!",
+  "read a book!",
+  "exercice!",
+  "go to class!",
+];
 
-// for (var i = 0; i < todo.length; i++) {
-//   // console.log(todo[i] + "!");
+// for (var i = 0; i < todos.length; i++) {
+//   // console.log(todos[i] + "!");
 
 //   //to always have a ! on console
-//   todo[i] = todo[i] + "!";
+//   todos[i] = todos[i] + "!";
 //   //will not work because the target value is string
-//   // todo[i].pop();
+//   // todos[i].pop();
 
 //   //, you need to target the array like: but it will delete half of the array
-//   todo.pop();
+//   todos.pop();
 
 // }
 
 //To delete all
-var todolength = todo.length;
+// var todoslength = todos.length;
 
-for (var i = 0; i < todolength; i++) {
-  todo.pop();
+// for (var i = 0; i < todoslength; i++) {
+//   todos.pop();
+// }
+
+// //while
+// var counterOne = 0;
+// while (counterOne < 10) {
+//   console.log(counterOne);
+//   counterOne++;
+// }
+
+// var counterTwo = 10;
+// while (counterTwo > 0) {
+//   console.log("while", counterTwo);
+//   counterTwo--;
+// }
+
+//do while
+// var counterThree = 10;
+// do {
+//   console.log("do while", counterThree);
+//   counterThree--;
+// } while (counterThree > 0);
+
+//For
+var todoslength = todos.length;
+// for (var i = 0; i < todoslength; i++) {
+//   console.log("for", todos[i], i);
+// }
+
+//for each
+
+// todos.forEach(function (todo) {
+//   console.log("for each", todo);
+// });
+
+//another way to do for each
+
+function logTodos(todo, i) {
+  console.log(todo, i);
 }
+todos.forEach(logTodos);
+todosImportant.forEach(logTodos);
