@@ -193,33 +193,33 @@ const facebook = {
 
 //124 Build Facebook
 
-const database = [
-  {
-    username: "Mael",
-    password: "Mael",
-  },
-  {
-    username: "Hazelle",
-    password: "Hazelle",
-  },
-];
+// const database = [
+//   {
+//     username: "Mael",
+//     password: "Mael",
+//   },
+//   {
+//     username: "Hazelle",
+//     password: "Hazelle",
+//   },
+// ];
 
-const newsfeed = [
-  { username: "Hazelle", timeline: "Time flies" },
-  { username: "Mael", timeline: "I want to be web developer" },
-];
+// const newsfeed = [
+//   { username: "Hazelle", timeline: "Time flies" },
+//   { username: "Mael", timeline: "I want to be web developer" },
+// ];
 
-const userNamePrompt = prompt("What is your username?");
-const passwordPrompt = prompt("What is your password?");
+// const userNamePrompt = prompt("What is your username?");
+// const passwordPrompt = prompt("What is your password?");
 
-function signIn(uname, pass) {
-  if (uname === database[0].username && pass === database[0].password) {
-    console.log(newsfeed);
-  } else {
-    console.log("You are not registered");
-  }
-}
-signIn(userNamePrompt, passwordPrompt);
+// function signIn(uname, pass) {
+//   if (uname === database[0].username && pass === database[0].password) {
+//     console.log(newsfeed);
+//   } else {
+//     console.log("You are not registered");
+//   }
+// }
+// signIn(userNamePrompt, passwordPrompt);
 
 //125 JavaScript Technology
 //function declaration
@@ -327,8 +327,62 @@ var todoslength = todos.length;
 
 //another way to do for each
 
-function logTodos(todo, i) {
-  console.log(todo, i);
+// function logTodos(todo, i) {
+//   console.log(todo, i);
+// }
+// todos.forEach(logTodos);
+// todosImportant.forEach(logTodos);
+
+//Exercice 2 : Build Facebook 2
+
+const database = [
+  {
+    username: "Mael",
+    password: "Mael",
+  },
+  {
+    username: "Hazelle",
+    password: "Hazelle",
+  },
+  {
+    username: "elle",
+    password: "elle",
+  },
+];
+
+const newsfeed = [
+  { username: "Hazelle", timeline: "Time flies" },
+  { username: "Mael", timeline: "I want to be web developer" },
+];
+
+function isUserValid(username, password) {
+  for (var i = 0; i < database.length; i++) {
+    if (
+      database[i].username === username &&
+      database[i].password === password
+    ) {
+      return true;
+    }
+  }
+  return false;
 }
-todos.forEach(logTodos);
-todosImportant.forEach(logTodos);
+
+function signIn(username, password) {
+  // console.log(isUserValid(username, password));
+
+  if (isUserValid(username, password)) {
+    console.log(newsfeed);
+  } else {
+    alert("Sorry, wrong username and password");
+  }
+
+  // if (uname === database[0].username && pass === database[0].password) {
+  //   console.log(newsfeed);
+  // } else {
+  //   console.log("You are not registered");
+  // }
+}
+var userNamePrompt = prompt("What is your username?");
+var passwordPrompt = prompt("What is your password?");
+
+signIn(userNamePrompt, passwordPrompt);
