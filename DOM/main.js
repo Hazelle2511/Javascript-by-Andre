@@ -45,4 +45,14 @@ li = document.querySelectorAll("li")[1].parentElement.parentElement.children;
 console.log(li);
 
 //IT IS  IMPORTANT TO CACHE SELECTORS IN VARIABLES
-var h1 = document.querySelector("h1");
+// var h1 = document.querySelector("h1");
+
+//For button
+
+// var button = document.getElementsByTagName("button");
+//Returns an array the getElementsByTagName. You cant use method on array
+var button = document.getElementsByTagName("button")[0];
+
+button.addEventListener("mouseenter", function () {
+  console.log("click!!!!");
+});
