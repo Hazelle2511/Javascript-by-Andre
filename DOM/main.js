@@ -23,36 +23,50 @@ dom = document.querySelector("li").setAttribute("random", "1000");
 // h1.className = "classTitle";
 
 //classList//best
-let li;
-li = document.querySelector("li").classList;
-li = document.querySelector("li").classList.add("classTitle");
-li = document.querySelector("li").classList.remove("classTitle");
-li = document.querySelector("li").classList.add("done");
-li = document.querySelector("li").classList.toggle("done");
+// let li;
+// li = document.querySelector("li").classList;
+// li = document.querySelector("li").classList.add("classTitle");
+// li = document.querySelector("li").classList.remove("classTitle");
+// li = document.querySelector("li").classList.add("done");
+// li = document.querySelector("li").classList.toggle("done");
 
-//Bonus
-//innerHTML//dangerous
-let h1;
-h1 = document.querySelector("h1").innerHTML = "<strong>!!!!!!</strong>";
+// //Bonus
+// //innerHTML//dangerous
+// let h1;
+// h1 = document.querySelector("h1").innerHTML = "<strong>!!!!!!</strong>";
 
-//parent element
-li = document.querySelectorAll("li")[1];
-li = document.querySelectorAll("li")[1].parentElement;
-li = document.querySelectorAll("li")[1].parentElement.parentElement;
+// //parent element
+// li = document.querySelectorAll("li")[1];
+// li = document.querySelectorAll("li")[1].parentElement;
+// li = document.querySelectorAll("li")[1].parentElement.parentElement;
 
-//children
-li = document.querySelectorAll("li")[1].parentElement.parentElement.children;
-console.log(li);
+// //children
+// li = document.querySelectorAll("li")[1].parentElement.parentElement.children;
+// console.log(li);
 
 //IT IS  IMPORTANT TO CACHE SELECTORS IN VARIABLES
 // var h1 = document.querySelector("h1");
 
+//134 DOM EVENTS
 //For button
 
 // var button = document.getElementsByTagName("button");
 //Returns an array the getElementsByTagName. You cant use method on array
-var button = document.getElementsByTagName("button")[0];
+// var button = document.getElementsByTagName("button")[0];
 
-button.addEventListener("mouseenter", function () {
-  console.log("click!!!!");
+// button.addEventListener("mouseenter", function () {
+//   console.log("click!!!!");
+// });
+
+//
+
+const button = document.getElementById("enter");
+const input = document.getElementById("userinput");
+const ul = document.querySelector("ul");
+
+button.addEventListener("click", function () {
+  // console.log("the button is working");
+  const li = document.createElement("li");
+  li.appendChild(document.createTextNode("testing"));
+  ul.appendChild(li);
 });
