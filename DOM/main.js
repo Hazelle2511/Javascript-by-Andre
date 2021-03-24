@@ -60,13 +60,69 @@ dom = document.querySelector("li").setAttribute("random", "1000");
 
 //
 
+// // First version of code or long version
+// const button = document.getElementById("enter");
+// const input = document.getElementById("userinput");
+// const ul = document.querySelector("ul");
+
+// button.addEventListener("click", function () {
+ 
+//   if(input.value.length > 0 ) {
+//   const li = document.createElement("li");
+
+//    li.appendChild(document.createTextNode(input.value));
+//   ul.appendChild(li);
+//   input.value = "";
+//   }
+
+// });
+
+// //We can also use event.which besides event.keyCode
+// input.addEventListener("keypress", function (event) {
+
+//   // console.log(event)
+//   if(input.value.length > 0 && event.keyCode === 13) {
+//   const li = document.createElement("li");
+//    li.appendChild(document.createTextNode(input.value));
+//   ul.appendChild(li);
+//   input.value = "";
+//   }
+
+// });
+
+
+//To make it more shorter 
+
 const button = document.getElementById("enter");
 const input = document.getElementById("userinput");
 const ul = document.querySelector("ul");
 
-button.addEventListener("click", function () {
-  // console.log("the button is working");
+function inputLength() {
+  return input.value.length;
+}
+
+function createListElement() {
   const li = document.createElement("li");
-  li.appendChild(document.createTextNode("testing"));
+  li.appendChild(document.createTextNode(input.value));
   ul.appendChild(li);
-});
+  input.value = "";
+}
+
+function addListAfterClick() {
+  if(inputLength() > 0 ) {
+   createListElement();
+  }
+
+}
+
+function addListAfterKeypress(event) {
+  if(inputLength() > 0 && event.keyCode === 13) {
+  createListElement();
+  }
+
+}
+
+button.addEventListener("click", addListAfterClick);
+
+
+input.addEventListener("keypress", addListAfterKeypress);
