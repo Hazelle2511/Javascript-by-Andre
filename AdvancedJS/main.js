@@ -92,3 +92,21 @@ function moveCommand(direction) {
     }
     return whatHappens;
 }
+
+//146 ES5 and </ES6>
+
+//using var, the result will be true for both sides 
+// while let, the result are inside is true, outside is false, because
+//whenever we are using a bracket with let, it produces another/new scope
+//const cannot be updated
+const player = "Hazelle";
+let experience = 100;
+let  wizardLevel = false;
+
+
+if(experience > 90) {
+    let  wizardLevel = true;
+    console.log('inside', wizardLevel);
+}
+
+console.log('outside', wizardLevel);
