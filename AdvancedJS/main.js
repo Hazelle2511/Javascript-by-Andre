@@ -110,3 +110,75 @@ if(experience > 90) {
 }
 
 console.log('outside', wizardLevel);
+
+
+//const cannot reassign the variable but can change the property
+
+const obj = {
+ player: "Hazelle",
+experience: 100,
+ wizardLevel: false
+}
+
+console.log(obj)
+
+//Destructuring
+const object = {
+ player: "Hazelle",
+experience: 100,
+ wizardLevel: false
+}
+
+const player = obj.player;
+const wizardLevel = obj.wizardLevel;
+let experience = obj.experience;
+
+//To make it short
+
+const {player, wizardLevel} = obj;
+let {experience} = obj;
+
+//Another ways to do object properties
+
+const name = "john snow";
+
+const objt = {
+    [name]: "hello",
+    [1 + 2]: "hihi"
+}
+
+//Anothe way
+
+const a = "bobby";
+const b = 200;
+const c = true;
+
+const obje = {
+    a: a,
+    b: b,
+    c: c
+}
+
+console.log(obje)
+
+//if the declaration and value are the same, do this instead
+const a = "bobby";
+const b = 200;
+const c = true;
+
+const obje = {
+     a,
+     b,
+     c
+}
+
+console.log(obje)
+
+//Template Strings
+const name = "Sally";
+const age = 34;
+const pet = "dog";
+//const greeting = "Hello " + name + " you seem to de doing " + greeting;
+
+const greetingBest = `Hello ${name}, you seem to be ${age - 14}. What a lovely ${pet}`
+console.log(greetingBest)
