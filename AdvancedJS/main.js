@@ -99,67 +99,67 @@ function moveCommand(direction) {
 // while let, the result are inside is true, outside is false, because
 //whenever we are using a bracket with let, it produces another/new scope
 //const cannot be updated
-const player = "Hazelle";
-let experience = 100;
-let  wizardLevel = false;
+// const player = "Hazelle";
+// let experience = 100;
+// let  wizardLevel = false;
 
 
-if(experience > 90) {
-    let  wizardLevel = true;
-    console.log('inside', wizardLevel);
-}
+// if(experience > 90) {
+//     let  wizardLevel = true;
+//     console.log('inside', wizardLevel);
+// }
 
-console.log('outside', wizardLevel);
+// console.log('outside', wizardLevel);
 
 
-//const cannot reassign the variable but can change the property
+// //const cannot reassign the variable but can change the property
 
-const obj = {
- player: "Hazelle",
-experience: 100,
- wizardLevel: false
-}
+// const obj = {
+//  player: "Hazelle",
+// experience: 100,
+//  wizardLevel: false
+// }
 
-console.log(obj)
+// console.log(obj)
 
-//Destructuring
-const object = {
- player: "Hazelle",
-experience: 100,
- wizardLevel: false
-}
+// //Destructuring
+// const object = {
+//  player: "Hazelle",
+// experience: 100,
+//  wizardLevel: false
+// }
 
-const player = obj.player;
-const wizardLevel = obj.wizardLevel;
-let experience = obj.experience;
+// const player = obj.player;
+// const wizardLevel = obj.wizardLevel;
+// let experience = obj.experience;
 
-//To make it short
+// //To make it short
 
-const {player, wizardLevel} = obj;
-let {experience} = obj;
+// const {player, wizardLevel} = obj;
+// let {experience} = obj;
 
-//Another ways to do object properties
+// //Another ways to do object properties
 
-const name = "john snow";
+// const name = "john snow";
 
-const objt = {
-    [name]: "hello",
-    [1 + 2]: "hihi"
-}
+// const objt = {
+//     [name]: "hello",
+//     [1 + 2]: "hihi"
+// }
 
-//Anothe way
+// //Anothe way
 
-const a = "bobby";
-const b = 200;
-const c = true;
+// const a = "bobby";
+// const b = 200;
+// const c = true;
 
-const obje = {
-    a: a,
-    b: b,
-    c: c
-}
+// const obje = {
+//     a: a,
+//     b: b,
+//     c: c
+// }
 
-console.log(obje)
+// console.log(obje)
 
 //if the declaration and value are the same, do this instead
 const a = "bobby";
@@ -175,10 +175,47 @@ const obje = {
 console.log(obje)
 
 //Template Strings
-const name = "Sally";
-const age = 34;
-const pet = "dog";
+// const name = "Sally";
+// const age = 34;
+// const pet = "dog";
 //const greeting = "Hello " + name + " you seem to de doing " + greeting;
 
-const greetingBest = `Hello ${name}, you seem to be ${age - 14}. What a lovely ${pet}`
-console.log(greetingBest)
+// const greetingBest = `Hello ${name}, you seem to be ${age - 14}. What a lovely ${pet}`
+// console.log(greetingBest)
+
+
+//default arguments
+
+function greet(name='', age = 30, pet = 'cat') {
+
+return `Hello ${name}, you seem to be ${age - 14}. What a lovely ${pet}`
+}
+
+console.log(greet('Hazelle', 15, 'dog' ))
+
+//Symbol is used for mostly unique types, it is used as modifier identity like object properties
+
+let sym1 = Symbol();
+let sym2 = Symbol('foo');
+let sym3 = Symbol('foo');
+
+console.log(sym2 === sym3);
+
+
+//Arrow function 
+function add1(a,b) {
+    return a + b;
+
+}
+
+//Arrow function
+
+//if you have a single return
+const add2 = (a, b) => a + b;
+
+console.log(add2(5,5))
+
+//if you have multiple returns
+const add3 = (a,b) => {
+    return a + b;
+}
