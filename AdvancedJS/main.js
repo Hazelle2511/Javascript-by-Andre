@@ -219,3 +219,39 @@ console.log(add2(5,5))
 const add3 = (a,b) => {
     return a + b;
 }
+
+
+//148 Advanced Functions
+// first() {
+// var greet = 'Hi';
+// function second() {
+//     alert(greet);
+// }
+// return second;
+// }
+
+// var newFunc = first();
+// newFunc();
+
+//Transform to Modern
+const first = () => {
+const greet = 'Hi';
+const second = () => {
+    const name = "bobby"
+    alert(greet);
+}
+return second;
+}
+
+const newFunc = first();
+newFunc();
+
+//Closures = a function ran. the function executed. It's never going to run again
+//BUT it's going to remember that there are references to those variables
+//so the child scope always has access to the parent scope
+
+
+//Currying
+const multiply = (a,b) => a * b;
+const curriedMultiply = (a) => (b) => a * b;
+curriedMultiply(3)(4) //a is 3 and b is 4
