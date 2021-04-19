@@ -255,3 +255,19 @@ newFunc();
 const multiply = (a,b) => a * b;
 const curriedMultiply = (a) => (b) => a * b;
 curriedMultiply(3)(4) //a is 3 and b is 4
+const multiply5 =  curriedMultiply(5);
+
+//Compose
+const compose = (f,g) => a => f(g(a));
+//Result would be const compose = (f,g) => a =>f(g(5))
+// const compose = (sum,sum) => a =>f((6))
+// const compose = (sum,sum) => a =>f((7))
+const sum = (num) => num + 1;
+console.log(compose(sum,sum)(5))
+
+//Avoiding side effects, functional purity called determinism
+// Must not accept the outside world;
+var a= 1;
+function b() {
+    a = 2;
+}
