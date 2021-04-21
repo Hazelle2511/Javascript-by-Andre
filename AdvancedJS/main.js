@@ -271,3 +271,27 @@ var a= 1;
 function b() {
     a = 2;
 }
+
+
+//150  Advanced Arrays
+//Result is undefined
+// const array = [1,5,16,26,10];
+// const newArray = array.forEach(num => {
+//     num * 2
+// });
+// console.log(newArray);
+
+//Instead
+const array = [1,5,16,26,10];
+double = [];
+const newArray = array.forEach(num => {
+    double.push(num * 2)
+});
+console.log(`forEAch ${double}`);
+
+//Map, filter, REduce, Most important methods
+
+const mapArray = array.map((num) => {
+    return num * 2
+})
+console.log(`Map ${mapArray}`)
