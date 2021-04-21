@@ -282,6 +282,8 @@ function b() {
 // console.log(newArray);
 
 //Instead
+
+//Foreach just iterates the collection of array and applied the operation on the element
 const array = [1,5,16,26,10];
 double = [];
 const newArray = array.forEach(num => {
@@ -290,7 +292,7 @@ const newArray = array.forEach(num => {
 console.log(`forEAch ${double}`);
 
 //Map, filter, REduce, Most important methods
-
+//Map expects a return or result/ always a return element
 const mapArray = array.map((num) => {
     return num * 2
 })
