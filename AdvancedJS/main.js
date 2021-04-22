@@ -292,8 +292,19 @@ const newArray = array.forEach(num => {
 console.log(`forEAch ${double}`);
 
 //Map, filter, REduce, Most important methods
+
 //Map expects a return or result/ always a return element
-const mapArray = array.map((num) => {
-    return num * 2
-})
+// const mapArray = array.map(num => {
+//     return num * 2
+// })
+//Better way
+const mapArray = array.map(num => num * 2)
 console.log(`Map ${mapArray}`)
+//Filter
+const filterArray = array.filter(num =>  num > 5);
+console.log('filter', filterArray);
+//Reduce
+const reduceArray = array.reduce((accumulator, num) => {
+    return accumulator + num
+}, 0)
+console.log('Reduce', reduceArray)
