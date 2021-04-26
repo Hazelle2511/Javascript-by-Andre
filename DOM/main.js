@@ -2,6 +2,7 @@ let dom = document.getElementsByTagName("h1");
 dom = document.getElementsByClassName("second");
 dom = document.getElementById("first");
 dom = document.getElementsByClassName("second")[0];
+// console.log(dom)
 
 //RECOMMENDED
 dom = document.querySelector("h1");
@@ -11,6 +12,7 @@ dom = document.querySelectorAll("h1, li");
 dom = document.querySelector("li").getAttribute("random");
 dom = document.querySelector("li").setAttribute("random", "1000");
 
+// console.log(dom)
 //Changing styles
 //style.{property}//ok
 
@@ -23,12 +25,14 @@ dom = document.querySelector("li").setAttribute("random", "1000");
 // h1.className = "classTitle";
 
 //classList//best
-// let li;
-// li = document.querySelector("li").classList;
-// li = document.querySelector("li").classList.add("classTitle");
-// li = document.querySelector("li").classList.remove("classTitle");
-// li = document.querySelector("li").classList.add("done");
-// li = document.querySelector("li").classList.toggle("done");
+let li;
+li = document.querySelector("li").classList;
+// console.log(li)
+li = document.querySelector("li").classList.add("classTitle");
+// console.log(li)
+li = document.querySelector("li").classList.remove("classTitle");
+li = document.querySelector("li").classList.add("done");
+li = document.querySelector("li").classList.toggle("done");
 
 // //Bonus
 // //innerHTML//dangerous

@@ -293,6 +293,7 @@ console.log(`forEAch ${double}`);
 
 //Map, filter, REduce, Most important methods
 
+
 //Map expects a return or result/ always a return element
 // const mapArray = array.map(num => {
 //     return num * 2

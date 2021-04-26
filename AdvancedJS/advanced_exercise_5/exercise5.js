@@ -44,17 +44,17 @@ const mapArray = array.map(user => {
 })
 console.log(mapArray)
 //Filter the array to only include users who are on team: red
-// const filterArray = array.filter(user => {
-//   return user.team === 'red';
-// })
-// console.log(filterArray);
-const filterArray = array.filter((user,teamRed) => {
-  let {username} = user;
-  let {team} = teamRed;
-  console.log(team);
-  return (team === 'red' ? username: 'Not on red team');
+const filterArray = array.filter(user => {
+  return user.team === 'red';
 })
 console.log(filterArray);
+// const filterArray = array.filter((user,teamRed) => {
+//   let {username} = user;
+//   let {team} = teamRed;
+//   console.log(team);
+//   return (team === 'red' ? username: 'Not on red team');
+// })
+// console.log(filterArray);
 
 //Find out the total score of all users using reduce
 
@@ -67,4 +67,16 @@ const newArray = arrayNum.map((num, i) => {
 	return num * 2;
 })
 
+const newArray = arrayNum.map((num, i) => num *2);
+
 //BONUS: create a new list with all user information, but add "!" to the end of each items they own.
+
+
+const answer = array.map(user => {
+  user.items = user.items.map(item =>  {
+    item + "!"
+  })
+  return user;
+})
+
+console.log(answer);
