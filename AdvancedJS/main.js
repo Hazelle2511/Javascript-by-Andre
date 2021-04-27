@@ -309,3 +309,44 @@ const reduceArray = array.reduce((accumulator, num) => {
     return accumulator + num
 }, 0)
 console.log('Reduce', reduceArray)
+
+//152 Advanced Objects
+//referenced type
+var object1 = { value: 10};
+var object2 = object1;
+var object3 = {value: 10}
+
+//Because object1 and object2 has the same box1, while object3 has box2
+object1===object2
+true
+object1===object3
+false
+//Arrays are just objects at the end of the day
+[]===[]//False
+//context vs scope
+
+//Scope is created with curly functions {} while
+//Context tells you where you are within the object
+//this is the window
+//this just refer to what object is inside of
+console.log(this)
+console.log(this === window)
+this.alert('hello')
+
+//another example
+function a() {
+    console.log(this)
+}
+a() //the result is window
+
+window.a()//same result
+
+//another example
+const object4 = {
+    a:function() {
+        console.log(this)
+    }
+}
+object4.a()
+
+//instantiation
