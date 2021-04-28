@@ -349,4 +349,31 @@ const object4 = {
 }
 object4.a()
 
-//instantiation
+//instantiation is for reusing code
+//if we use class, we must use constructor
+class Player {
+    constructor(name, type) {
+        console.log('Player', this)
+        this.name = name;
+        this.type = type;
+    }
+    introduce() {
+        console.log(`Hi, I am ${this.name}. I am ${this.type}`)
+    }
+}
+
+//Everytime we extends, we need to use extension by using super() so that you have an access on the Player
+class Wizard extends Player{
+    
+    constructor(name, type) {
+       
+        super(name, type)
+         console.log('Wizard', this)
+    }
+    play() {
+        console.log(`Hello, I'm ${this.type}`)
+    }
+}
+
+const wizard = new Wizard('Shelly', 'Healer')
+const wizard2 = new Wizard('Shawn', 'Dark Magic')
