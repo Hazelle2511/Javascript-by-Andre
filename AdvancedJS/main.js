@@ -377,3 +377,40 @@ class Wizard extends Player{
 
 const wizard = new Wizard('Shelly', 'Healer')
 const wizard2 = new Wizard('Shawn', 'Dark Magic')
+
+
+//154 Pass By Value(Primitive type like numbers string, etc) vs Pass by Reference(Objects)
+
+//pass by value, we copy the values
+var a = 5;
+var b= a;
+b++;
+
+console.log(a)//5
+console.log(b)//6
+
+
+//pass by reference, we dont copy the values, we update it
+//It's good because we are saving space for memory
+
+let obj1 = {name: 'Yao', password: '123'}
+let obj2 = obj1;
+obj2.password = 'easypeasy';
+
+console.log(obj1)//{name: 'Yao', password: 'easypeasy'}
+console.log(obj2)//{name: 'Yao', password: 'easypeasy'}
+
+
+//also in array
+let c = [1,2,3,4]
+let d = c;
+d.push(12455);
+console.log(c);//[1, 2, 3, 4, 12455]
+console.log(d); //[1, 2, 3, 4, 12455]
+
+//but if you dont want to update the previous value
+let c = [1,2,3,4]
+let d= [].concat(c);
+d.push(12455);
+console.log(c);//[1, 2, 3, 4]
+console.log(d); [1, 2, 3, 4, 12455]
