@@ -414,3 +414,38 @@ let d= [].concat(c);
 d.push(12455);
 console.log(c);//[1, 2, 3, 4]
 console.log(d); [1, 2, 3, 4, 12455]
+
+
+//also in object
+
+let obj = {a: 'a', b: 'b', c: 'c'};
+// let clone = Object.assign({}, obj);
+
+//another way to clone is to use spread operator
+let clone = {...obj}
+
+obj.c = 5;
+console.log(clone);
+
+//but if you want to updata the value
+let obj = {a: 'a', b: 'b', c: 'c'};
+let clone = obj;
+
+obj.c = 5;
+console.log(clone);
+
+
+//Complete code
+let obj = {a: 'a', b: 'b', c: {
+    deep: 'Try to clone me'
+}};
+let clone1 = obj;
+let clone = Object.assign({}, obj);
+let clone2 = {...obj}
+let superClone = JSON.parse(JSON.stringify(obj))
+
+obj.c.deep = 'hahaha';
+console.log('Updated',clone1);
+console.log('ShallowClone',clone);
+console.log('ShallowClone',clone2);
+console.log('Deep Clone', superClone)
