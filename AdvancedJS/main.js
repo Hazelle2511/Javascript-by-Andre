@@ -449,3 +449,19 @@ console.log('Updated',clone1);
 console.log('ShallowClone',clone);
 console.log('ShallowClone',clone2);
 console.log('Deep Clone', superClone)
+
+
+//155 TYPE COERCION
+1=='1'//tRUE
+1==='1'//FALSE
+
+if(1 ) { //equivalent to true
+    console.log(5)
+}//result is 5.
+
+if(0) {//equivalent to false
+    console.log(5)
+}//result is undefined
+
+-0 === +0 //true but thery are different
+Object.is(-0,+0)// false
