@@ -465,3 +465,15 @@ if(0) {//equivalent to false
 
 -0 === +0 //true but thery are different
 Object.is(-0,+0)// false
+
+
+//157 ES7
+
+const pets = ['dogs', 'cats', 'bats'];
+pets.includes('dogs')
+
+const square = (x) => x**2;
+square(5)
+
+const cube = (x) => x**3;
+cube(5)
