@@ -475,5 +475,4 @@ pets.includes('dogs')
 const square = (x) => x**2;
 square(5)
 
-const cube = (x) => x**3;
-cube(5)
+
