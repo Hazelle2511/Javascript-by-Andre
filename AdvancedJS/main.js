@@ -476,3 +476,69 @@ const square = (x) => x**2;
 square(5)
 
 
+//158 ES8
+
+// .padStart();
+// .padEnd();
+
+// Example:
+// 'Title'.padStart(10)
+// "     Title"
+// 'Title'.padEnd(10)
+// "Title     "
+
+const fun = (a,b,c,d,) => {
+    console.log(a)
+}
+
+fun(1,2,3,4,)
+
+//Object.entries
+//Object.values
+//Object.keys
+
+//Object keys
+
+let obj = {
+    username0: 'Santa',
+    username1: 'Rodulf',
+    username2: 'Mr. Grinch'
+}
+
+Object.keys(obj).forEach((key,index)=> {
+    console.log(key, obj[key])
+});
+
+//Result
+// username0 Santa
+// username1 Rodulf
+// username2 Mr. Grinch
+
+//Object.values
+
+Object.values(obj).forEach(value => {
+    console.log(value)
+})
+
+//Result
+// Santa
+//  Rodulf
+//   Mr. Grinch
+
+//Object.entries
+
+Object.entries(obj).forEach(value => {
+    console.log(value)
+})
+
+//Result
+// (2) ["username0", "Santa"]
+//  (2) ["username1", "Rodulf"]
+//  (2) ["username2", "Mr. Grinch"]
+
+Object.entries(obj).map(value => {
+    return value[1] + value[0].replace('username', '')
+})
+
+//Result
+//  ["Santa0", "Rodulf1", "Mr. Grinch2"]
