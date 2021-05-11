@@ -542,3 +542,30 @@ Object.entries(obj).map(value => {
 
 //Result
 //  ["Santa0", "Rodulf1", "Mr. Grinch2"]
+
+
+//162 <ES10
+//Flat cleans up the data
+
+const array = [1, [2,3], [4,5]];
+array.flat()//can also means array.flat(1);
+// Result (5) [1, 2, 3, 4, 5]
+
+const array2 = [1, 2, [3,4, [5]]]
+array2.flat(2);
+
+// Result (5) [1, 2, 3, 4, 5]
+
+const array3 = [[1,2], 3,4, [5,6],[[[[7]]], 8],[9,10]];
+array3.flat(50);//50 because we have nestedarray < 50 
+//Result (10) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    const entries = ['bobo', 'sally',,,,,'cindy'];
+    entries.flat();
+//RESULT (3) ["bobo", "sally", "cindy"]
+
+//flatMap() combination of function flat and map
+
+const array3Chaos = array3.flatMap(num => num +7);
+//Result 
+//(6) ["1,27", 10, 11, "5,67", "7,87", "9,107"]
