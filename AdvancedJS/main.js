@@ -569,3 +569,67 @@ array3.flat(50);//50 because we have nestedarray < 50
 const array3Chaos = array3.flatMap(num => num +7);
 //Result 
 //(6) ["1,27", 10, 11, "5,67", "7,87", "9,107"]
+
+
+//Trim function
+const useremail = '   camacho.hazelle@gmail.com';
+const useremail2 = 'mael.parois@gmail.com   '
+
+console.log(useremail.trimStart());
+console.log(useremail2.trimEnd());
+
+//The result will be no blank spaces;
+
+//FormEntries makes the array turn into objects
+
+const userProfiles = [['BronTheMvp', 35], ['KdtheSnake', 30], ['KawaiitheRobot', 28]];
+Object.fromEntries(userProfiles)
+
+//REsult
+// BronTheMvp: 35
+// KawaiitheRobot: 28
+// KdtheSnake: 30
+
+//On es8 the equivant of this function is Object.entries
+//It came from object.entries
+const userProfiles = [['BronTheMvp', 35], ['KdtheSnake', 30], ['KawaiitheRobot', 28]];
+const obj = Object.fromEntries(userProfiles);
+Object.entries(obj);
+
+
+//try and catch functiont
+
+try {
+    4+5
+} catch {
+
+}
+
+//9
+
+//
+
+try {
+    true+'hi'
+} catch {
+    console.log('you messed up')
+}
+
+//'truehi' because of type coercion
+
+try {
+ bob +'hi'
+} catch {
+    console.log('you messed up')
+}
+
+//you messed up
+
+//Back then, you need to add error
+try {
+ bob +'hi'
+} catch(error) {
+    console.log('you messed up' + error)
+}
+
+//Result you messed upReferenceError: bob is not defined
