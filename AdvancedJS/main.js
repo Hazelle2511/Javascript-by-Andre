@@ -633,3 +633,37 @@ try {
 }
 
 //Result you messed upReferenceError: bob is not defined
+
+//164 Advance loops
+
+const fruits = ['mango', 'grapes', 'strawberry'];
+
+
+//for loop
+for(let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i])
+}
+
+//for each
+fruits.forEach(item => {
+    console.log(item)
+    // return item;
+})
+
+//for of 
+
+//iterating
+//arrays
+
+for(item of fruits) {
+    console.log(item)
+}
+
+//strings
+
+for(item of 'fruits') {
+    console.log(item)
+}
+
+//for in 
+//works for objects
