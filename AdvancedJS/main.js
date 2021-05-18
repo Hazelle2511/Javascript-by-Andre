@@ -667,3 +667,13 @@ for(item of 'fruits') {
 
 //for in 
 //works for objects
+
+const detailedFruits = {
+    mango: 5,
+    grapes: 10,
+    strawberry: 15
+}
+
+for(item in detailedFruits) {
+    console.log(item);
+}
