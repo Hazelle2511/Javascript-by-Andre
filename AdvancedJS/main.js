@@ -667,6 +667,7 @@ for(item of 'fruits') {
 
 //for in 
 //works for objects
+//enumerating
 
 const detailedFruits = {
     mango: 5,
