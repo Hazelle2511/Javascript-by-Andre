@@ -44,14 +44,46 @@ const array3 = [] // should return 0
 //   return highest
 // }
 
-biggestNumberInArray(array);
+// biggestNumberInArray(array);
 
-function biggestNumberInArray2(arr) {
+//forEach
 
-}
+// function biggestNumberInArray2(arr) {
+//   let highest = 0;
+//   arr.forEach(item => {
+//     if(highest < item) {
+//       highest = item
+//     }
+//   })
+
+//   return highest
+
+// }
+// biggestNumberInArray(array);
+
+
+//for in
+
+// function biggestNumberInArray3(arr) {
+// let highest = 0;
+// for(item in arr) {
+//   if(highest < item) {
+//     highest = item
+//   }
+// }
+// return item
+// }
+
+//for of
 
 function biggestNumberInArray3(arr) {
-
+let highest = 0;
+for(item of arr) {
+  if(highest < item) {
+    highest = item
+  }
+}
+return item
 }
 
 
@@ -64,5 +96,14 @@ amazonBasket = {
 }
 
 function checkBasket(basket, lookingFor) {
+
+  for(item in basket) {
+    if(item === lookingFor) {
+
+      return `${lookingFor} is in your basket`
+
+    }
+  }
+  return 'that does not exist in your basket'
 
 }
