@@ -678,3 +678,21 @@ const detailedFruits = {
 for(item in detailedFruits) {
     console.log(item);
 }
+
+
+//166 ES20 Part 1;
+
+//BigInt 
+//is used when we want to use a number larger thatn max_safe_integer and we wanna do some calculations with it
+
+//Sample on console
+//typeof 1n 
+//result will be bigInt
+//Number.MAX_SAFE_INTEGER
+//9007199254740991
+//9007199254740991 + 1 
+//9007199254740992 -> Good result
+//9007199254740991 + 10
+//9007199254741000 -> Bad result so bigInt will enter 
+//9007199254741000 - 1
+//9007199254741000
