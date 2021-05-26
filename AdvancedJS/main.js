@@ -696,3 +696,24 @@ for(item in detailedFruits) {
 //9007199254741000 -> Bad result so bigInt will enter 
 //9007199254741000 - 1
 //9007199254741000
+
+let will_pokemon = {
+    pikachu: {
+        species: 'Mouse Pokemon',
+        height: 0.4,
+        weight: 6
+    }
+}
+let andrei_pokemon = {
+    raichu: {
+        species: 'Mouse Pokemon',
+        height: 6,
+        weight: 8
+    }
+}
+
+let weight = will_pokemon.pikachu.weight;
+console.log('weight', weight)
+
+let raichu_weight = andrei_pokemon.pikachu.weight;
+console.log('weight', weight)
