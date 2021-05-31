@@ -682,6 +682,10 @@ for(item in detailedFruits) {
 
 //166 ES20 Part 1;
 
+//BigInt
+//Nullish coalescing operator ??
+//Optional chaining operator .?
+
 //BigInt 
 //is used when we want to use a number larger thatn max_safe_integer and we wanna do some calculations with it
 
@@ -705,15 +709,60 @@ let will_pokemon = {
     }
 }
 let andrei_pokemon = {
-    raichu: {
+    pikachu: {
         species: 'Mouse Pokemon',
         height: 6,
-        weight: 8
+        weight: 8,
+        
     }
 }
 
-let weight = will_pokemon.pikachu.weight;
-console.log('weight', weight)
+// let weight = will_pokemon.pikachu.weight;
+// console.log('weight', weight)
 
-let raichu_weight = andrei_pokemon.pikachu.weight;
-console.log('weight', weight)
+// let raichu_weight = andrei_pokemon.pikachu.weight;
+// console.log('weight', weight)
+
+
+//166 ES20 Part 2;
+
+//Its complicate so the solution for this is option chaining operator
+// if(andrei_pokemon.pikachu && andrei_pokemon.pikachu.weight) {
+//     let weight2 = andrei_pokemon.pikachu.weight
+//     console.log(weight2)
+// } else {
+//     let weight2 = undefined;
+//     console.log(weight2)
+// }
+
+//optional chaining operator ?.
+let weight3 = andrei_pokemon?.pikachu?.weight
+console.log(weight3)
+
+//166 ES20 Part 3;
+
+
+let andrei_pokemon = {
+    pikachu: {
+        species: 'Mouse Pokemon',
+        height: 6,
+        weight: 8,
+        power: '' // || false || 0, result will be no power still
+        
+    }
+}
+let power = andrei_pokemon?.pikachu?.power || 'no power'
+console.log(power)
+
+//Nullish coaleshing operator ?? will be uselful if you want to use || or operator
+let andrei_pokemon = {
+    pikachu: {
+        species: 'Mouse Pokemon',
+        height: 6,
+        weight: 8,
+        power: 0
+        
+    }
+}
+let power = andrei_pokemon?.pikachu?.power ?? 'no power';
+console.log(power)
