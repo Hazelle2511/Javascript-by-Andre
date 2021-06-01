@@ -766,3 +766,29 @@ let andrei_pokemon = {
 }
 let power = andrei_pokemon?.pikachu?.power ?? 'no power';
 console.log(power)
+
+
+//171 Debugging
+const flattened =[[0,1],[2,3],[4,5]].reduce((a,b) =>a.concat(b), []) 
+
+//To debug
+const flattened = [[0,1],[2,3],[4,5]].reduce(
+    (accumulator, array)=> {
+    console.log('Array',array);
+    console.log('Accumulator', accumulator)
+    return accumulator.concat(array)
+},[])
+
+
+//Second way to debug
+const flattened = [[0,1],[2,3],[4,5]].reduce(
+    (accumulator, array)=> {
+    debugger;
+    return [].concat([0,1])
+},[])
+
+const flattened = [[0,1],[2,3],[4,5]].reduce(
+    (accumulator, array)=> {
+    debugger;
+    return accumulator.concat(array)
+},[])
