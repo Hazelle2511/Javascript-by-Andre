@@ -50,15 +50,15 @@ if (andrei_pokemon && andrei_pokemon.raichu && will_pokemon
 
 
     //Trial
-    if(andrei_pokemon?.raichu?.will_pokemon?.pikachu?.friend?.charizard) {
+    if(andrei_pokemon?.raichu && will_pokemon?.pikachu?.friend?.charizard) {
         console.log('fight!')
     } else {
         console.log('walk away ....')
     }
 
 // Exercise 4: What do these each output?
-console.log(false ?? 'hellooo')
-console.log(null ?? 'hellooo')
-console.log(null || 'hellooo')
-console.log((false || null) ?? 'hellooo')
-console.log(null ?? (false || 'hellooo'))
+console.log(false ?? 'hellooo')//false
+console.log(null ?? 'hellooo')//'hellooo'
+console.log(null || 'hellooo')//'helloo'
+console.log((false || null) ?? 'hellooo')//'helloooe
+console.log(null ?? (false || 'hellooo'))//'hellooo'

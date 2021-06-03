@@ -765,7 +765,7 @@ let andrei_pokemon = {
     }
 }
 let power = andrei_pokemon?.pikachu?.power ?? 'no power';
-console.log(power)
+console.log(power);
 
 
 //171 Debugging
@@ -792,3 +792,29 @@ const flattened = [[0,1],[2,3],[4,5]].reduce(
     debugger;
     return accumulator.concat(array)
 },[])
+
+//172 How JS works?
+// Program allocates memory and  parse and execute
+//JS Engine consist of two parts:
+//Memory Heap and Call Stack
+//Memory Heap allocate a memory like:
+//const a = 1; const b= 10; const c = 100; 
+//But it will cause memory leak that is why global variables are bad
+
+//Call Stack reads and executes our scripts
+console.log('1');
+console.log('2');
+console.log('3');
+
+//Another example
+
+const one = () => {
+    const two = () => {
+        console.log('4')
+    }
+    two()
+}
+//console.Log('4')
+//two()
+//one()
+//CallStack will run upwards and remove downwards
