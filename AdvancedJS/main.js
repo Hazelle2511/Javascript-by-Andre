@@ -817,4 +817,50 @@ const one = () => {
 //console.Log('4')
 //two()
 //one()
-//CallStack will run upwards and remove downwards
+//CallStack will run upwards and remove downwards and will be empty
+
+//JS is a single threaded langage that can be non blocking
+//single threaded means one call stack only, it can run at a time
+//Other languages has multiple call stack called multi threaded and the problem here is you 
+//will be running on deadlocks
+//while single threaded runs single at the time, more controllable
+//Asynchronous means line 1 gets executed, after line 2, 
+
+//To create stock overflow
+//Use recursion, a function that calls itself
+function foo() {
+    foo()
+}
+foo() //you keep adding foo with your call stack and will cause stock overflow
+
+
+//To prevent stack overflow, you need to use asynchronous
+
+console.log('1');
+setTimeout(()=> {
+console.log('2')
+}, 2000 ); //even if you declare it on 0 instead of 2000, same result
+console.log('3');
+
+//Result is 1, 3, 2
+
+//For JS scripts to run we need engine and js runtime environment which is part of navigateur
+//On top of the engine, there are: web apis(DOM, AJAX, Timeout), Event Loop and Callback Que(Onclick, onLoad, onDone)
+
+//Sample:
+
+setTimeout(()=> {
+console.log('2')
+}, 2000 );//
+//CALL STACK
+
+setTimeout()
+//WEB API
+
+callback()
+//CALLBACK QUE
+
+
+//EVENT LOOP
+//Will look if the the call stack is empty or if theres on callback que, if there is
+//the callback() in callback que will go to call stack and run it and then it will remove it on callback que
