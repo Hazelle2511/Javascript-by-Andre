@@ -864,3 +864,32 @@ callback()
 //EVENT LOOP
 //Will look if the the call stack is empty or if theres on callback que, if there is
 //the callback() in callback que will go to call stack and run it and then it will remove it on callback que
+
+
+//173 Modules
+//EFFI  
+//The issue the order of the files is still important like script tags
+
+//first js  filed loaded
+var myApp = {};
+//second js file loaded
+ (function() {
+     myApp.add = function(a,b ) {
+         return a * b;
+     }
+ })();
+
+ //Jquery uses this allow us to use $
+
+
+ //Common JS + Browersify
+
+ //Module Bundler
+
+ //js1  
+ module.exports = function(a,b) {
+     return a + b
+ }
+
+ //js2
+ var add =require("./add")
