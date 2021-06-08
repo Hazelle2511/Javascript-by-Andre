@@ -885,6 +885,7 @@ var myApp = {};
  //Common JS + Browersify
 
  //Module Bundler
+ //it will make one script instead a lot of scripts
 
  //js1  
  module.exports = function(a,b) {
@@ -893,3 +894,27 @@ var myApp = {};
 
  //js2
  var add =require("./add")
+
+
+ //ES6 + Webpack2
+//js1
+ export const add = (a,b) => a + b;
+ //or
+ export default function add(a,b) {
+     return a + b;
+ }
+
+ //js2
+ import {add} from './add';
+ //or
+ import add from './add';
+
+
+ //On webpack you will see a config js like:
+ module.exports = {
+     entry: './app/main.js',
+     output: {
+         path: './dist',
+         filename: 'bundle.js'
+     }
+ }
