@@ -918,3 +918,12 @@ var myApp = {};
          filename: 'bundle.js'
      }
  }
+
+
+
+
+ //179 Using Terminal
+//  cd / goint to root folder
+//  cd ~ user folder
+//  cd Document/test showing the test folder or File
+//  open . to open it
