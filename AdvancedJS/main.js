@@ -927,3 +927,18 @@ var myApp = {};
 //  cd ~ user folder
 //  cd Document/test showing the test folder or File
 //  open . to open it
+//mkdir webapp
+//Ls
+//cd webapp
+//touch index.html
+//open index.html
+//open -a "Sublime Text"
+// open -a "Sublime Text" index.html
+//open index.html
+//mv index.html about.html //for renaming the file
+//rm about.html //remove the file
+//pwd means present working directory
+//cd ..
+//rm -r webapp //to remove webapp
+//cd ..
+//rm -r test
